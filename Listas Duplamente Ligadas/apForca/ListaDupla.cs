@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -13,8 +13,9 @@ public class ListaDupla<Dado>
   int quantosNos;
   bool primeiroAcessoDoPercurso;
   int numeroDoNoAtual;
+  private NoDuplo<Dado> anterior;
 
-  public void PosicionarNoInicio()
+    public void PosicionarNoInicio()
   {
     atual = primeiro;
     NumeroDoNoAtual = 0;
@@ -163,7 +164,7 @@ public class ListaDupla<Dado>
 
   public bool Existe(Dado outroProcurado)
   {
-    //anterior = null;
+    NoDuplo<Dado> anterior = null;
     atual = primeiro;
 
     //	Em seguida, é verificado se a lista está vazia. Caso esteja, é
@@ -317,3 +318,4 @@ public class ListaDupla<Dado>
   }
 
 }
+
